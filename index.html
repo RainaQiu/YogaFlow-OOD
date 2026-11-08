@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf3fb">
+  <title>YogaFlow — Interactive Requirements Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>YogaFlow</span></div>
+      <p class="brand-subtitle">Studio operations prototype</p>
+      <label class="role-label" for="role-select">Preview as</label>
+      <select id="role-select" aria-label="Preview role">
+        <option value="manager">Studio Manager</option>
+        <option value="staff">Studio Staff</option>
+        <option value="instructor">Instructor</option>
+        <option value="customer">Customer</option>
+      </select>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="prototype-dot"></div>
+        <div><strong>Prototype mode</strong><span>Sample records only</span></div>
+      </div>
+      <button class="reset-link" id="reset-demo" type="button">Reset sample data</button>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" aria-label="Open navigation">☰</button>
+        <div class="crumb">Yoga H’om <span>/</span> <span id="crumb-page">Overview</span></div>
+        <div class="topbar-right"><span class="topbar-date" id="today-label"></span><span class="avatar" aria-hidden="true">RAS</span></div>
+      </header>
+      <main id="app" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
